@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BMI Calculator </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function calBMI() {
+			var weight = parseInt(document.BMI.weight.value);
+			var feet = parseInt(document.BMI.feet.value);
+			var inch = parseInt(document.BMI.inch.value);
+			var height = (feet * 12 ) + inch ;
+			var bmi = (703 * weight ) / (Math.pow( height , 2 ));
+			var ans = document.getElementById('ans');
+			var show = document.getElementById('show');
+			ans.innerHTML = bmi; 
+			if (bmi < 18.5 ){
+				show.innerHTML = "You are Under Weight !"
+			}
+			else if(bmi > 18.5 && bmi < 25 ){
+				show.innerHTML = "You are normal weight !"
+			}
+			else if(bmi > 25 ){
+				show.innerHTML = "You are over weight !"
+			}
+			else{
+				show.innerHTML = "Something wrong !"
+			}
+		}
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form name="BMI">
+			<h1>BMI Calculator</h1>
+			<label>Enter your weight </label><br>
+			<input type="number" name="weight" id = "lb"><br><br>
+
+			<label>Enter your height </label><br>
+			<input type="number" name="heightft" id="feet"><strong>feet</strong>
+			<input type="number" name="heighti" id="inch"><strong>inch</strong><br><br>
+
+			<button onclick="calBMI()" type="button">Calculate</button><br><br>
+
+			<label>Result</label>
+			<b id="ans"></b><br>
+			<div class="show">
+				<h5 id="show"></h5>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    justify-content: center;
+
+}
+form{
+    float: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100% ;
+    color : #18d111;
+    flex-direction: column;
+    background : linear-gradient(#0b6480,#630b80,#d11180);
+    background-size: 400% 400%;
+    animation: move-bg 1s linear infinite;
+}
+
+.show {
+    background-color: #097952;
+    margin-top: 20px;
+    text-align: center;
+    color : red;
+    font-family: 'lora';
+    font-size: 35px;
+}
+@keyframes move-bg{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}

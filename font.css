@@ -1,0 +1,13 @@
+@font-face{
+	font-family: 'lora';
+	src : url("fonts/Lora-VariableFont_wght.ttf");
+}
+
+@font-face{
+	font-family: 'roboto';
+	src : url("fonts/Roboto-Light.ttf");
+}
+@font-face{
+	font-family: 'ramb';
+	src : url("fonts/RampartOne-Regular.ttf");
+}
